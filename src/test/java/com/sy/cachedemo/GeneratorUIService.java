@@ -3,20 +3,17 @@ package com.sy.cachedemo;
 import com.github.davidfantasy.mybatisplus.generatorui.GeneratorConfig;
 import com.github.davidfantasy.mybatisplus.generatorui.MybatisPlusToolsApplication;
 import com.github.davidfantasy.mybatisplus.generatorui.mbp.NameConverter;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cache.annotation.EnableCaching;
 
-@SpringBootApplication
-@EnableCaching
-public class CacheDemoApplication {
+/**
+ * @ClassName GeneratorUIService
+ * @Description
+ * @Author sunyu
+ * @Date 2023/9/12 17:31
+ * @Version 1.0
+ **/
+public class GeneratorUIService {
 
     public static void main(String[] args) {
-        // SpringApplication.run(CacheDemoApplication.class, args);
-
-
-
-        //测试是使用generator-ui
         GeneratorConfig config = GeneratorConfig.builder().jdbcUrl("jdbc:mysql://123.57.45.239:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=GMT%2B8")
                 .userName("root")
                 .password("root")
@@ -49,5 +46,4 @@ public class CacheDemoApplication {
                 .build();
         MybatisPlusToolsApplication.run(config);
     }
-
 }
